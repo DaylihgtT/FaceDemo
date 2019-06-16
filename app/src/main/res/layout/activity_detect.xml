@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetectActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:id="@+id/img_show_detect_result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/test_img1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_show_detect_result"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="年龄"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/detect_result_age_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/detect_result_age_title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="24"
+        android:textSize="16sp"
+        android:id="@+id/detect_result_age_num"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_show_detect_result"
+        app:layout_constraintTop_toTopOf="@id/detect_result_age_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="性别"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/detect_result_sex_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/detect_result_sex_title"
+        app:layout_constraintTop_toTopOf="@id/detect_result_age_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="男"
+        android:textSize="16sp"
+        android:id="@+id/detect_result_sex_num"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_show_detect_result"
+        app:layout_constraintTop_toTopOf="@id/detect_result_sex_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="微笑程度"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/detect_result_smail_title"
+        />
+
+    <SeekBar
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/detect_result_smail_title"
+        app:layout_constraintTop_toTopOf="@id/detect_result_smail_title"
+        android:layout_marginLeft="20dp"
+        android:clickable="false"
+        android:progress="10"
+        android:max="50"
+        android:id="@+id/detect_result_smail_seekbar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_show_detect_result"
+        app:layout_constraintTop_toTopOf="@id/detect_result_mood_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="人种"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/detect_result_people_type_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/detect_result_people_type_title"
+        app:layout_constraintTop_toTopOf="@id/detect_result_mood_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="WHITE"
+        android:textSize="16sp"
+        android:id="@+id/detect_result_people_type_num"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_show_detect_result"
+        app:layout_constraintTop_toTopOf="@id/detect_result_people_type_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="左眼状态"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/detect_result_left_eye_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/detect_result_left_eye_title"
+        app:layout_constraintTop_toTopOf="@id/detect_result_people_type_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="睁眼,未戴眼镜"
+        android:textSize="16sp"
+        android:id="@+id/detect_result_left_eye_num"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_show_detect_result"
+        app:layout_constraintTop_toTopOf="@id/detect_result_left_eye_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="右眼状态"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/detect_result_right_eye_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/detect_result_right_eye_title"
+        app:layout_constraintTop_toTopOf="@id/detect_result_left_eye_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="睁眼，未戴眼镜"
+        android:textSize="16sp"
+        android:id="@+id/detect_result_right_eye_num"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/img_show_detect_result"
+        app:layout_constraintTop_toTopOf="@id/detect_result_smail_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="情绪"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/detect_result_mood_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/detect_result_sex_title"
+        app:layout_constraintTop_toTopOf="@id/detect_result_smail_title"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="平静"
+        android:textSize="16sp"
+        android:id="@+id/detect_result_mood_num"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_show_detect_result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:text="一键美颜"
+        android:id="@+id/btn_beautiful_show"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_show_detect_result"
+        app:layout_constraintLeft_toRightOf="@id/btn_beautiful_show"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        android:text="稠密关键点"
+        android:id="@+id/btn_key_point_show"
+        />
+
+</android.support.constraint.ConstraintLayout>
