@@ -3107,6 +3107,38 @@ public class DetectImagBean {
             private BlurBean blur;
             private SmileBean smile;
             private FacequalityBean facequality;
+            private EmotionBean emotionBean;
+
+            /**
+             * ethnicity : {"value":"ASIAN"}
+             */
+
+            private FacesBean.AttributesBean.EthnicityBean ethnicity;
+
+            public FacesBean.AttributesBean.EthnicityBean getEthnicity() {
+                return ethnicity;
+            }
+
+            public void setEthnicity(FacesBean.AttributesBean.EthnicityBean ethnicity) {
+                this.ethnicity = ethnicity;
+            }
+
+            public static class EthnicityBean {
+                /**
+                 * value : ASIAN
+                 */
+
+                private String value;
+
+                public String getValue() {
+                    return value;
+                }
+
+                public void setValue(String value) {
+                    this.value = value;
+                }
+            }
+
 
             public BeautyBean getBeauty() {
                 return beauty;
@@ -3172,16 +3204,24 @@ public class DetectImagBean {
                 this.facequality = facequality;
             }
 
+            public EmotionBean getEmotionBean() {
+                return emotionBean;
+            }
+
+            public void setEmotionBean(EmotionBean emotionBean) {
+                this.emotionBean = emotionBean;
+            }
+
             public static class BeautyBean {
                 /**
                  * female_score : 77
                  * male_score : 73.823
                  */
 
-                private int female_score;
+                private double female_score;
                 private double male_score;
 
-                public int getFemale_score() {
+                public double getFemale_score() {
                     return female_score;
                 }
 
@@ -3567,6 +3607,82 @@ public class DetectImagBean {
 
                 public void setValue(double value) {
                     this.value = value;
+                }
+            }
+
+            public static class EmotionBean {
+                /**
+                 * anger : 7.456
+                 * disgust : 13.823
+                 * fear : 53.823
+                 * happiness : 3.823
+                 * neutral : 3.823
+                 * sadness : 11.823
+                 * surprise : 10.00
+                 */
+
+                private double anger;
+                private double disgust;
+                private double fear;
+                private double happiness;
+                private double neutral;
+                private double sadness;
+                private double surprise;
+
+                public double getAnger() {
+                    return anger;
+                }
+
+                public void setAnger(double anger) {
+                    this.anger = anger;
+                }
+
+                public double getDisgust() {
+                    return disgust;
+                }
+
+                public void setDisgust(double disgust) {
+                    this.disgust = disgust;
+                }
+
+                public double getFear() {
+                    return fear;
+                }
+
+                public void setFear(double fear) {
+                    this.fear = fear;
+                }
+
+                public double getHappiness() {
+                    return happiness;
+                }
+
+                public void setHappiness(double happiness) {
+                    this.happiness = happiness;
+                }
+
+                public double getNeutral() {
+                    return neutral;
+                }
+
+                public void setNeutral(double neutral) {
+                    this.neutral = neutral;
+                }
+
+                public double getSadness() {
+                    return sadness;
+                }
+
+                public void setSadness(double sadness) {
+                    this.sadness = sadness;
+                }
+
+                public double getSurprise() {
+                    return surprise;
+                }
+
+                public void setSurprise(double surprise) {
+                    this.surprise = surprise;
                 }
             }
         }

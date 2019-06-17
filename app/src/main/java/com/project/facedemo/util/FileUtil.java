@@ -1,14 +1,20 @@
 package com.project.facedemo.util;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Base64;
 import android.util.Log;
 
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DecimalFormat;
 
 /**
@@ -102,12 +108,21 @@ public class FileUtil {
      * @since JDK 1.6
      */
     public static String encodeBase64File(String path) throws Exception {
-        File file = new File(path);
-        FileInputStream inputFile = new FileInputStream(file);
-        byte[] buffer = new byte[(int) file.length()];
-        inputFile.read(buffer);
-        inputFile.close();
-        return Base64.encodeToString(buffer, Base64.DEFAULT);
+        try {
+            FileInputStream fis = new FileInputStream(path);//转换成输入流
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            byte[] buffer = new byte[1024];
+            int count = 0;
+            while((count = fis.read(buffer)) >= 0){
+                baos.write(buffer, 0, count);//读取输入流并写入输出字节流中
+            }
+            fis.close();//关闭文件输入流
+            String uploadBuffer = Base64.encodeToString(baos.toByteArray(),Base64.DEFAULT);  //进行Base64编码
+            Log.d("—ZRT—",uploadBuffer);
+            return uploadBuffer;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     /**
@@ -148,6 +163,21 @@ public class FileUtil {
             return false;
         }
         return true;
+    }
+
+    public static Bitmap getBitmapFromFile(String path){
+        FileInputStream f = null;
+        try {
+            f = new FileInputStream(path);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Bitmap bm = null;
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 10;//图片的长宽都是原来的1/10
+        BufferedInputStream bis = new BufferedInputStream(f);
+        bm = BitmapFactory.decodeStream(bis, null, options);
+        return bm;
     }
 
 }

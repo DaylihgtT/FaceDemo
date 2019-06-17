@@ -7,12 +7,12 @@
     tools:context=".activity.DetectActivity">
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="400dp"
+        android:layout_width="108dp"
+        android:layout_height="233dp"
         android:id="@+id/img_show_detect_result"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/test_img1"
+        android:layout_marginTop="40dp"
         />
 
     <TextView
@@ -160,7 +160,7 @@
         app:layout_constraintTop_toTopOf="@id/detect_result_left_eye_title"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
-        android:text="睁眼，未戴眼镜"
+        android:text="睁眼,未戴眼镜"
         android:textSize="16sp"
         android:id="@+id/detect_result_right_eye_num"
         />
@@ -196,7 +196,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/img_show_detect_result"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="25dp"
         android:text="一键美颜"
         android:id="@+id/btn_beautiful_show"
@@ -207,7 +207,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/img_show_detect_result"
         app:layout_constraintLeft_toRightOf="@id/btn_beautiful_show"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="25dp"
         android:text="稠密关键点"
         android:id="@+id/btn_key_point_show"
